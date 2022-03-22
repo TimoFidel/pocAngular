@@ -1,0 +1,22 @@
+<app-admin-navigation></app-admin-navigation>
+<div class="container">
+    <div class="col-md-8 mx-auto  border p-5 shadow bg-white rounded"style="margin-top: 13%;" >
+        <form (ngSubmit)='onSubmit()' class="form-signin">
+            <label for="vendorName" class="sr-only mb-3">Vendor Name:</label>
+            <input type="vendorname" id="inputjName" class="form-control mb-3"  [(ngModel)]="vendor.vendorName" name="vendorName" required autofocus>
+            <label for="vendorRating" class="sr-only mb-3">Vendor Rating:</label>
+            <input type="number" id="inputSescription" class="form-control mb-3" [(ngModel)]="vendor.rating"  name="vendorRating" required >
+            <label for="vendorAddress" class="sr-only mb-3">Vendor Address:</label>
+            <input type="vendoraddress" id="inputSescription" class="form-control mb-3" [(ngModel)]="vendor.address"  name="vendorAddress" required >
+            <label for="vendorContact" class="sr-only mb-3">Vendor contact:</label>
+            <input type="vendorcontact" id="inputSescription" class="form-control mb-3" [(ngModel)]="vendor.contactNumebr"  name="vendorContact" required >
+            <button class="btn btn-lg btn-primary btn-block mr-5" type="submit">Add Vendor</button>
+            
+        </form>
+    
+    
+    </div>
+                
+        
+
+</div>

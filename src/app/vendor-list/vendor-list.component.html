@@ -1,0 +1,27 @@
+<app-customer-navigation></app-customer-navigation>
+<div class="container">
+    <h2>Vendor List</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Vendor Name</th>
+                <th>Vendor Rating</th>
+                <th>Contact Number</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr *ngFor="let vendor of vendors">
+                
+                <td>{{vendor.vendorName}}</td>
+                <td>{{vendor.rating}}</td>
+                <td>{{vendor.contactNumebr}}</td>
+                <td>
+                    <button (click)="viewVendorById(vendor.id)" class="btn btn-info" style="margin-left:10px">View</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

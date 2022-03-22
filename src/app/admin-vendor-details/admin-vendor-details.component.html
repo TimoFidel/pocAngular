@@ -1,0 +1,26 @@
+<app-admin-navigation></app-admin-navigation>
+<div class="container">
+    <div class="col-md-8 mx-auto  border p-5 shadow bg-white rounded"style="margin-top: 13%;" >
+                
+        <div class="bg-light text-center"><h3>Vendor Details</h3></div>
+            <div >
+                <label class="sr-only mb-3"><b>Vendor Name:</b></label>  {{vendor.vendorName}}
+            </div>
+            <div >
+                <label class="sr-only mb-3"><b>Contact Number:</b> </label>{{vendor.contactNumebr}}
+            </div>
+            <div >
+                <label class="sr-only mb-3"><b>Address:</b></label>{{vendor.address}}
+            </div>
+            <div >
+                <label class="sr-only mb-3"><b>Rating</b></label>{{vendor.rating}}
+            </div>
+            <div class="button-box col-md-8 d-flex justify-content-around">
+                <button class="btn btn-lg btn-primary btn-block mr-5" (click)="showProducts(vendor.id)" >Show Products</button>
+                <button class="btn btn-lg btn-primary btn-block mr-5" (click)="addProducts(vendor.id)" >Add Products</button>
+                <button class="btn btn-lg btn-danger btn-block mr-5" (click)="deleteVendor(vendor.id)" >Delete Vendor</button>
+            </div>
+                   
+    </div>
+
+</div>

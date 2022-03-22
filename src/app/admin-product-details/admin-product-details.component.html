@@ -1,0 +1,28 @@
+<app-admin-navigation></app-admin-navigation>
+<div class="container">
+    <div class="col-md-8 mx-auto  border p-5 shadow bg-white rounded"style="margin-top: 13%;" >
+                
+        <div class="bg-light text-center"><h3>Product Details</h3></div>
+            <div >
+                <label class="sr-only mb-3"><b>Model Name:</b></label>  {{product.modelName}}
+            </div>
+            <div >
+                <label class="sr-only mb-3"><b> Os:</b> </label>{{product.os}}
+            </div>
+            <div >
+                <label class="sr-only mb-3"><b>RAM:</b></label>{{product.ram}}
+            </div>
+            <div >
+                <label class="sr-only mb-3"><b>Disc Storage:</b></label>{{product.driveSize}}
+            </div>
+            <div >
+                <label class="sr-only mb-3"><b>stock Available:</b></label>{{product.stockAvailable}}
+            </div>
+            <div >
+                <label class="sr-only mb-3"><b>vendor Name:</b></label>{{product.vendor.vendorName}}
+            </div>
+            <button (click)="deleteProductById(product.id)" class="btn btn-danger" style="margin-left:10px">Delete</button>
+                
+    </div>
+
+</div>
