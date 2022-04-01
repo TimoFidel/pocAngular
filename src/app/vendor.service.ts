@@ -9,7 +9,7 @@ import { Vendor } from './vendor';
 })
 export class VendorService {
 
-  private baseUrl="http://localhost:8080/api/v1/vendor";
+  private baseUrl="http://localhost:8081/api/v1/vendor";
 
   constructor(
     private httpClient:HttpClient
@@ -30,6 +30,9 @@ export class VendorService {
     return this.httpClient.post(`${this.baseUrl}/addVendor`,vendor)
   }
   addProduct(id:number,product:Product){
-    return this.httpClient.post(`${this.baseUrl}/${id}/addProducts`,product)
+    return this.httpClient.post(`${this.baseUrl}/addProduct/${id}`,product)
+  }
+  updateVendor(id:number,vendor:Vendor){
+    return this.httpClient.post(`${this.baseUrl}/updateVendor/${id}`,vendor)
   }
 }

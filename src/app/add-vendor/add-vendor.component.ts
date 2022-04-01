@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Vendor } from '../vendor';
 import { VendorService } from '../vendor.service';
 
@@ -9,8 +10,11 @@ import { VendorService } from '../vendor.service';
 })
 export class AddVendorComponent implements OnInit {
   vendor:Vendor=new Vendor();
+  @Input()
+  showMePartially: boolean = false;
   constructor(
-    private vendorService:VendorService
+    private vendorService:VendorService,
+    private router:Router,
   ) { }
 
   ngOnInit(): void {
@@ -19,8 +23,14 @@ export class AddVendorComponent implements OnInit {
   onSubmit(){
     this.vendorService.addVendor(this.vendor).subscribe(data=>{
       console.log(data)
+      this.showMePartially=!this.showMePartially
+      
     })
     console.log(this.vendor)
+    this.router.navigate(["/adminVendors"])
+  .then(() => {
+    window.location.reload();
+  });
   }
 
 }

@@ -10,6 +10,7 @@ import { VendorService } from '../vendor.service';
 })
 export class AdminVendorsComponent implements OnInit {
   declare vendors:Array<Vendor>
+  showVar: boolean = false;
   constructor(
     private vendorService:VendorService,
     private router:Router,
@@ -17,6 +18,7 @@ export class AdminVendorsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllVendors()
+    
   }
   viewVendorById(id:number){
     this.router.navigate(["/adminVendorDetail",{id:id}])
@@ -27,5 +29,8 @@ export class AdminVendorsComponent implements OnInit {
       console.log(this.vendors);
     })
   }
+  toggleChild(){
+    this.showVar = !this.showVar;
+}
 
 }

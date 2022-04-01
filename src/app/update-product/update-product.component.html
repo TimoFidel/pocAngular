@@ -1,0 +1,29 @@
+<app-admin-navigation></app-admin-navigation>
+<div class="container">
+    <div class="col-md-8 mx-auto  border p-5 shadow bg-white rounded"style="margin-top: 13%;" >
+        <form (ngSubmit)='onSubmit()' class="form-signin">
+            <label for="vendorName" class="sr-only mb-3">Model Name:</label>
+            <input type="vendorname" id="inputjName" class="form-control mb-3"  [(ngModel)]="product.modelName" name="vendorName" required autofocus>
+            <label for="vendorRating" class="sr-only mb-3">Os:</label>
+            <input type="ProductOs" id="inputSescription" class="form-control mb-3" [(ngModel)]="product.os"  name="vendorRating" required >
+            <label for="vendorAddress" class="sr-only mb-3">RAM:</label>
+            <input type="vendoraddress" id="inputSescription" class="form-control mb-3" [(ngModel)]="product.ram"  name="vendorAddress" required >
+            <label for="vendorContact" class="sr-only mb-3">Disk Storage:</label>
+            <input type="vendorcontact" id="inputSescription" class="form-control mb-3" [(ngModel)]="product.driveSize"  name="vendorContact" required >
+            <label for="vendorContact" class="sr-only mb-3">Stock Availabe:</label>
+            <input type="number" id="inputSescription" class="form-control mb-3" [(ngModel)]="product.stockAvailable"  name="vendorContact" required >
+            <label for="vendorContact" class="sr-only mb-3">vendor:</label>
+            <select name="selectedvendor" id="aantal" class="form-control" [(ngModel)]="product.vendor">
+                <option ng-selected="product.vendor">{{product.vendor.vendorName}}</option>
+                <option *ngFor="let vendor of vendors" [ngValue]="vendor" >{{vendor.vendorName}}</option>
+            </select>
+            <button class="btn btn-lg btn-primary btn-block mr-5" type="submit">update Product</button>
+            
+        </form>
+    
+    
+    </div>
+                
+        
+
+</div>

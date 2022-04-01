@@ -19,6 +19,10 @@ import { AdminProductDetailsComponent } from './admin-product-details/admin-prod
 import { AddVendorComponent } from './add-vendor/add-vendor.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { FormsModule } from '@angular/forms';
+import { UpdateVendorComponent } from './update-vendor/update-vendor.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
+import { AdminVendorProductsComponent } from './admin-vendor-products/admin-vendor-products.component';
+import { AddProductToVendorComponent } from './add-product-to-vendor/add-product-to-vendor.component';
 
 @NgModule({
   declarations: [
@@ -36,13 +40,18 @@ import { FormsModule } from '@angular/forms';
     AdminVendorDetailsComponent,
     AdminProductDetailsComponent,
     AddVendorComponent,
-    AddProductComponent
+    AddProductComponent,
+    UpdateVendorComponent,
+    UpdateProductComponent,
+    AdminVendorProductsComponent,
+    AddProductToVendorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

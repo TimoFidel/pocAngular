@@ -7,11 +7,13 @@ import { Product } from './product';
   providedIn: 'root'
 })
 export class ProductService {
-  private baseUrl="http://localhost:8080/api/v1/product";
+  private baseUrl="http://localhost:8081/api/v1/product";
   constructor(
     private httpClient:HttpClient,
   ) { }
-
+  addNewProduct(product:Product){
+    return this.httpClient.post(`${this.baseUrl}/`,product)
+  }
   getproductById(id:number){
     return this.httpClient.get<Product>(`${this.baseUrl}/${id}`)
   }
@@ -23,5 +25,8 @@ export class ProductService {
   }
   deleteProduct(id:number){
     return this.httpClient.delete<Product>(`${this.baseUrl}/${id}`)
+  }
+  updateProduct(id:Number,product:Product){
+    return this.httpClient.post(`${this.baseUrl}/updateProduct/${id}`,product)
   }
 }

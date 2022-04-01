@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Vendor } from '../vendor';
 import { VendorService } from '../vendor.service';
@@ -12,6 +12,7 @@ import { VendorService } from '../vendor.service';
 export class VendorDetailsComponent implements OnInit {
   declare id:number;
   declare vendor:Vendor;
+  
   constructor(
     private activatedRouter:ActivatedRoute,
     private vendorService:VendorService,

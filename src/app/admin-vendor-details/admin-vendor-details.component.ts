@@ -36,10 +36,10 @@ export class AdminVendorDetailsComponent implements OnInit {
     })
   }
   showProducts(id:number){
-    this.router.navigate(["/adminProducts",{id:id}]);
+    this.router.navigate(["/adminVendorProducts",{id:id}]);
   }
   addProducts(id:number){
-    this.router.navigate(["/addProduct",{id:id}]);
+    this.router.navigate(["/addproductinvendor",{id:id}]);
   }
   deleteVendor(id:number){
     this.vendorService.deleteVendor(id).subscribe(data=>{
@@ -48,6 +48,10 @@ export class AdminVendorDetailsComponent implements OnInit {
     })
     
     
+  }
+  updateVendor(id:number){
+    console.log(id)
+    this.router.navigate(["/updateVendor",{id:id}]);
   }
 
 }

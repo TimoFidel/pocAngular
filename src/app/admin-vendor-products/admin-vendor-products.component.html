@@ -1,0 +1,33 @@
+<app-admin-navigation></app-admin-navigation>
+<div class="container">
+    <div class="d-flex bd-highlight mb-3">
+        <div class=" p-2 w-100 bd-highlight">
+            <h2>Product List</h2>
+        </div>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Model Name</th>
+                <th>Os</th>
+                <th>Stock Available</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr *ngFor="let product of products">
+                
+                <td>{{product.modelName}}</td>
+                <td>{{product.os}}</td>
+                <td>{{product.stockAvailable}}</td>
+                <td>
+                    <button (click)="viewProductById(product.id)" class="btn btn-info" style="margin-left:10px">View</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+

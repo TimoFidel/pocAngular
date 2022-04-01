@@ -1,6 +1,22 @@
 <app-customer-navigation></app-customer-navigation>
 <div class="container">
-    <h2>Vendor List</h2>
+    <div class="d-flex bd-highlight mb-3">
+        <div class=" p-2 w-100 bd-highlight">
+            <h2>Vendor List</h2>
+        </div>
+        <div class="d-flex bd-highlight mb-3">
+            <div class="p-2 bd-highlight">
+                
+                <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search" [(ngModel)]="searchKey">
+                    
+            </div>
+            <div class=" ml-auto p-2 bd-highlight">
+                <button type="button" class="btn  btn-primary me-2  " (click)="searchByKeyword(searchKey)">Search</button>
+            </div>
+        </div>
+
+    </div>
+    
     <table class="table table-striped">
         <thead>
             <tr>

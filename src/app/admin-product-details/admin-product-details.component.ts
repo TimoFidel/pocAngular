@@ -36,5 +36,9 @@ export class AdminProductDetailsComponent implements OnInit {
     })
     //console.log(id)
   }
+  updateProduct(id:number){
+    console.log(id);
+    this.router.navigate(["/updateProduct",{id:id}])
+  }
 
 }

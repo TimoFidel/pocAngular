@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../product';
+import { ProductService } from '../product.service';
 import { VendorService } from '../vendor.service';
 
 @Component({
@@ -11,21 +12,19 @@ import { VendorService } from '../vendor.service';
 export class AdminProductsComponent implements OnInit {
   declare id:number;
   declare products:Array<Product>;
+  showVar: boolean = false;
   constructor(
     private vendorService:VendorService,
+    private productService:ProductService,
     private activatedRoute:ActivatedRoute,
     private router:Router
   ) { }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(params=>{
-      this.id=params.id;
-      console.log(params.id)
-      this.getAllProducts(this.id)
-    })
+    this.getAllProducts()
   }
-  getAllProducts(id:number){
-    this.vendorService.getProductOfVendor(id).subscribe(data=>{
+  getAllProducts(){
+    this.productService.getAllProduct().subscribe(data=>{
       this.products=data
       console.log(data)
     })
@@ -33,5 +32,8 @@ export class AdminProductsComponent implements OnInit {
   viewProductById(id:number){
     this.router.navigate(["/adminProductDetail",{id:id}])
   }
+  toggleChild(){
+    this.showVar = !this.showVar;
+}
 
 }

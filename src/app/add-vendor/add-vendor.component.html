@@ -1,5 +1,5 @@
-<app-admin-navigation></app-admin-navigation>
-<div class="container">
+<!--<app-admin-navigation></app-admin-navigation>-->
+<div *ngIf="showMePartially" class="container">
     <div class="col-md-8 mx-auto  border p-5 shadow bg-white rounded"style="margin-top: 13%;" >
         <form (ngSubmit)='onSubmit()' class="form-signin">
             <label for="vendorName" class="sr-only mb-3">Vendor Name:</label>
