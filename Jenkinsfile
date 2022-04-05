@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     stages {
-        stage('Start app'){
+        stage('install sass'){
     		steps{
     			bat 'npm install node-sass'
     		}
