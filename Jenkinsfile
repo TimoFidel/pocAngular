@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('install sass'){
     		steps{
-    			bat 'npm install node-sass'
+    			bat 'npm install sass'
     		}
     	} 
         stage('Start app'){
