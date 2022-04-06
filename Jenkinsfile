@@ -1,14 +1,14 @@
 pipeline {
     agent any 
     stages {
-        stage('install sass'){
+        stage('docker build'){
     		steps{
-    			bat 'npm install sass'
+    			bat 'docker build . -t pocangular:latest'
     		}
     	} 
         stage('Start app'){
     		steps{
-    			bat 'ng serve'
+    			bat 'docker run -p 4200:80 pocangular:latest'
     		}
     	}   
 
