@@ -1,4 +1,4 @@
-FROM node:12.22 as builder
+FROM node:latest as builder
 WORKDIR /usr/src/app
 COPY package.json package-lock.json ./
 RUN npm install
