@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('docker build'){
     		steps{
-    			bat 'docker build . -t pocangular:latest'
+    			sh 'docker build . -t pocangular:latest'
     		}
     	} 
         stage('Start app'){
     		steps{
-    			bat 'docker run -p 4200:80 pocangular:latest'
+    			sh 'docker run -p 4200:80 pocangular:latest'
     		}
     	}   
 
