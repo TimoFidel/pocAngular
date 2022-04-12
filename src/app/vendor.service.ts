@@ -9,7 +9,7 @@ import { Vendor } from './vendor';
 })
 export class VendorService {
 
-  private baseUrl="http://pocbackend-env.eba-iqpicg48.ap-south-1.elasticbeanstalk.com//api/v1/vendor";
+  private baseUrl="http://pocbackend-env.eba-iqpicg48.ap-south-1.elasticbeanstalk.com/api/v1/vendor";
 
   constructor(
     private httpClient:HttpClient

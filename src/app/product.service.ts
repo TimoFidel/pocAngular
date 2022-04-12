@@ -7,7 +7,7 @@ import { Product } from './product';
   providedIn: 'root'
 })
 export class ProductService {
-  private baseUrl="http://pocbackend-env.eba-iqpicg48.ap-south-1.elasticbeanstalk.com//api/v1/product";
+  private baseUrl="http://pocbackend-env.eba-iqpicg48.ap-south-1.elasticbeanstalk.com/api/v1/product";
   constructor(
     private httpClient:HttpClient,
   ) { }
