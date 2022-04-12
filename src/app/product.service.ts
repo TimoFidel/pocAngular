@@ -7,7 +7,7 @@ import { Product } from './product';
   providedIn: 'root'
 })
 export class ProductService {
-  private baseUrl="http://localhost:8081/api/v1/product";
+  private baseUrl="http://35.154.103.94:8081/api/v1/product";
   constructor(
     private httpClient:HttpClient,
   ) { }

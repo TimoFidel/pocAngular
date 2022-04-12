@@ -9,7 +9,7 @@ import { Vendor } from './vendor';
 })
 export class VendorService {
 
-  private baseUrl="http://localhost:8081/api/v1/vendor";
+  private baseUrl="http://35.154.103.94:8081/api/v1/vendor";
 
   constructor(
     private httpClient:HttpClient
